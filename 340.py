@@ -21,10 +21,10 @@ def distcal(point_1, point_2):
 points_closest = None
 distance_minimum = float("inf")
 
-for point in combinations(set_of_points, 2):
-    distance = distcal(point[0], point[1])
+for points in combinations(set_of_points, 2):
+    distance = distcal(points[0], points[1])
     if distance < distance_minimum:
         distance_minimum = distance
-        points_closest = point
+        points_closest = points
 
 print(f"The two closest points are: {points_closest}")
